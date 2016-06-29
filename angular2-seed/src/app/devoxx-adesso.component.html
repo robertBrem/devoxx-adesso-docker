@@ -9,17 +9,17 @@
   </button>
 
   <div class="overlay-content">
-    <img src="../images/{{currentTalk}}/overview.png"/>
+    <img src="../images/{{currentTalk}}"/>
   </div>
 
 </div>
 <div class="talk-container">
   <md-card *ngFor="let talk of talks">
-    <img md-card-image [alt]="talk.title" src="../images/{{talk.image}}"/>
+    <img md-card-image [alt]="talk.title" src="../images/{{talk.image}}Pre.png"/>
     <md-card-title>{{talk.title}}</md-card-title>
     <md-card-content>{{talk.speakers}}</md-card-content>
     <md-card-actions align="end">
-      <button md-icon-button (click)="openNav()">
+      <button md-icon-button (click)="openNav(talk.image + '.png')">
         <md-icon>slideshow</md-icon>
       </button>
       <button md-icon-button *ngIf="talk.nerd">
