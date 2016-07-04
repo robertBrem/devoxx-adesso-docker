@@ -4,9 +4,7 @@
 </md-toolbar>
 <div id="myNav" class="overlay">
 
-  <button md-icon-button (click)="closeNav()" class="closebtn">
-    <md-icon>close</md-icon>
-  </button>
+  <a md-icon-button (click)="closeNav()" class="closebtn">&times;</a>
 
   <div class="overlay-content">
     <img src="../images/{{currentTalk}}"/>
@@ -22,8 +20,17 @@
       <button md-icon-button (click)="openNav(talk.image + '.png')">
         <md-icon>slideshow</md-icon>
       </button>
-      <button md-icon-button *ngIf="talk.nerd">
+      <button md-icon-button (click)="openUrl(talk.video)">
+        <md-icon>theaters</md-icon>
+      </button>
+      <button md-icon-button *ngIf="talk.nerd" title="Tech Recommendation">
         <md-icon>laptop_mac</md-icon>
+      </button>
+      <button md-icon-button *ngIf="talk.fav" title="Favorite Talk">
+        <md-icon>favorite</md-icon>
+      </button>
+      <button md-icon-button *ngIf="talk.business" title="Business Recommendation">
+        <md-icon>business</md-icon>
       </button>
     </md-card-actions>
   </md-card>
