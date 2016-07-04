@@ -164,7 +164,7 @@ export class DevoxxAdessoAppComponent {
       speakers: "Arun Gupta",
       image: "kubernetes"
     },
-    {title: "Progressive apps in the Real World", speakers: "Dean Hume", image: "progressiveAppsInTheRealWorld.png"},
+    {title: "Progressive apps in the Real World", speakers: "Dean Hume", image: "progressiveAppsInTheRealWorld"},
     {title: "The Art of Angular in 2016", speakers: "Matt Raible", image: "theArtOfAngular"},
     {
       title: "From object oriented to functional domain modeling",
